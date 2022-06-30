@@ -52,6 +52,7 @@ const newGuess = () => {
   submitBtn.setAttribute('type', 'submit');
   submitBtn.setAttribute('value', 'Submit');
   submitBtn.setAttribute('style', 'display: none');
+  // submitBtn.setAttribute('disabled', 'false');
   submitBtn.classList.add('submit-btn');
 
   form.appendChild(letter1);
@@ -139,13 +140,13 @@ const nextGuess = (goodLetters, currentForm, submit) => {
     const winnerText = document.createTextNode("You've successfully guessed the word!");
     winner.appendChild(winnerText);
     document.querySelector('.outcome').append(winner);
-    submit.setAttribute('disabled', 'true');
+    submit.remove();
   } else {
     const loss = document.createElement('h1');
     const lossText = document.createTextNode('Out of attempts, refresh to try another word!');
     loss.appendChild(lossText);
     document.querySelector('.outcome').append(loss);
-    submit.setAttribute('disabled', 'true');
+    submit.remove();
   }
 };
 
