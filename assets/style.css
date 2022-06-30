@@ -1,3 +1,26 @@
+header {
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  margin-top: 1rem;
+}
+
+.input-box {
+  text-align: center;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 1rem;
+  margin: .3rem;
+}
+
 .green {
   background-color: lightgreen;
 }
@@ -8,4 +31,14 @@
 
 .red {
   background-color: red;
+}
+
+@media screen and (max-width: 405px) {
+  .input-box {
+    text-align: center;
+  width: 1.5rem;
+  font-size: 3rem;
+  padding: 1rem;
+  margin: .3rem;
+  }
 }
